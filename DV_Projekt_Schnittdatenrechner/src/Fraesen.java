@@ -1,4 +1,3 @@
-
 public class Fraesen {
-	int ojojojojojjii;
-}
+	int ojojojojojjii;}
+	
