@@ -1,6 +1,6 @@
 
 public class Drehen {
 	
-	 int vorschub;
+	 double vorschub;
 
 }
