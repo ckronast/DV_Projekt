@@ -10,7 +10,7 @@ public class Test {
 		
 		String eingabe_bohrerdurchmesser = JOptionPane.showInputDialog("Bohrerdurchmesser [mm]:");
 		float bohrerdurchmesser = Float.parseFloat(eingabe_bohrerdurchmesser);
-		bohrerdurchmesser = bohrerdurchmesser/1000;
+		bohrerdurchmesser = bohrerdurchmesser/100;
 		
 		
 		Bohren berechnung = new Bohren(schnittgeschwindigkeit, bohrerdurchmesser);
