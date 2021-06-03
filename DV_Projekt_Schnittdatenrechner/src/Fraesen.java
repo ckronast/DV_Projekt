@@ -1,4 +1,4 @@
 
 public class Fraesen {
-int moin;
+int hallo;
 }
