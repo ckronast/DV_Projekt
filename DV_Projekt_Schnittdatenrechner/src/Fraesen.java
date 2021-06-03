@@ -1,4 +1,4 @@
 
 public class Fraesen {
-	int ojojojojojjiii;
+	int ojojojojojjii;
 }
