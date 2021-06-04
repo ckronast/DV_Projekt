@@ -5,6 +5,14 @@ public class Drehen extends Bearbeiten {
 	private float vorschubgeschwindigkeit;
 	private float drehzahlDrehen;
 	
+	
+	public Drehen ()
+	{
+		drehzahlDrehen = 1000;
+		vorschubgeschwindigkeit = 20;
+		vorschubDrehen = 5 ;
+	}
+	
 	public Drehen(float drehzahl, float vorschub)
 	{
 		drehzahlDrehen = drehzahl;
@@ -12,6 +20,7 @@ public class Drehen extends Bearbeiten {
 		vorschubDrehen = vorschub ;
 	}
 	
+
 	
 	public float vorschubgeschwindigkeitBerechnen() 
 	{		
