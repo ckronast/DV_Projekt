@@ -5,7 +5,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		
-		String eingabe_schnittgeschwindigkeit = JOptionPane.showInputDialog("Schnittgeschwindigkeit  [m/min]:");
+		String eingabe_schnittgeschwindigkeit = JOptionPane.showInputDialog("Schnittgeschwindigkeit [m/min]:");
 		float schnittgeschwindigkeit = Float.parseFloat(eingabe_schnittgeschwindigkeit);
 		
 		String eingabe_bohrerdurchmesser = JOptionPane.showInputDialog("Bohrerdurchmesser [mm]:");
