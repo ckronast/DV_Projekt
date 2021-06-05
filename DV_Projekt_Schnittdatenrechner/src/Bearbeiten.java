@@ -11,7 +11,7 @@ public class Bearbeiten {
 	private float durchmesser;
 	
 	
-	/**Methodenname: drehzahlBerechnen;
+ 	/**Methodenname: drehzahlBerechnen;
 	 * Ergebnistyp: float;
 	 * Parameter: float schnittgeschwindigkeit, float durchmesser;
 	 * Beschreibung: Methode um die Drehzahl aus der Schnittgeschwindigkeit und dem Durchmesser zu berechnen;
