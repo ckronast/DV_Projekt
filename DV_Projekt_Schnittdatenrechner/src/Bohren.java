@@ -13,4 +13,15 @@ public class Bohren extends Bearbeiten {
 		setSchnittgeschwindigkeit(Vc);
 		setDurchmesser(d);
 	};
+	
+	/**Konstruktorname: Bohren_Beispiel;
+	 * Ergebnistyp: keiner;
+	 * Parameter: keine;
+	 * Beschreibung: setzt die Werte Durchmesser und Schnittgeschwindigkeit auf vorgegebene Werte
+	 *  **/
+	 public Bohren() {
+		 setSchnittgeschwindigkeit(100);
+		 setDurchmesser(15);
+	 };
+	 
 }

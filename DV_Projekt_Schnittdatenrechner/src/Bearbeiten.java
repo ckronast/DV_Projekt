@@ -11,14 +11,14 @@ public class Bearbeiten {
 	private float durchmesser;
 	
 	
- 	/**Methodenname: drehzahlBerechnen;
+	/**Methodenname: drehzahlBerechnen;
 	 * Ergebnistyp: float;
 	 * Parameter: float schnittgeschwindigkeit, float durchmesser;
 	 * Beschreibung: Methode um die Drehzahl aus der Schnittgeschwindigkeit und dem Durchmesser zu berechnen;
 	 * Ergebnis: gibt die berechnete Drehzahl zurück**/
 	public float drehzahlBerechnen() {
 		float drehzahl;
-		drehzahl = (float) (schnittgeschwindigkeit/(Math.PI*durchmesser));
+		drehzahl = (float) (getSchnittgeschwindigkeit()/(Math.PI*getDurchmesser()));
 		return drehzahl;
 	}
 
