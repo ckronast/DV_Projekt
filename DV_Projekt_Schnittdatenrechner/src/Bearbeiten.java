@@ -1,4 +1,4 @@
-/**Klassenname: Bearbeiten; hallo
+/**Klassenname: Bearbeiten;
  * Beschreibung: beinhaltet die Methode 'drehzahlBerechnen' sowie die Attribute 'schnittgeschwindigkeit' und 'durchmesser', und übergibt diese an die Unterklassen;
  * Version: 1;
  * Autoren: Großkopf, Konstantin und Kronast, Constantin**/
