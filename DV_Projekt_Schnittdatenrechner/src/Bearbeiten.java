@@ -13,9 +13,9 @@ public class Bearbeiten {
 	
 	/**Methodenname: drehzahlBerechnen;
 	 * Ergebnistyp: float;
-	 * Parameter: float schnittgeschwindigkeit, float durchmesser;
 	 * Beschreibung: Methode um die Drehzahl aus der Schnittgeschwindigkeit und dem Durchmesser zu berechnen;
-	 * Ergebnis: gibt die berechnete Drehzahl zurück**/
+	 * @param float schnittgeschwindigkeit, float durchmesser;
+	 * @return float drehzahl**/
 	public float drehzahlBerechnen() {
 		float drehzahl;
 		drehzahl = (float) (getSchnittgeschwindigkeit()/(Math.PI*getDurchmesser()));
@@ -25,36 +25,34 @@ public class Bearbeiten {
 	
 	/**Methodenname: getDurchmesser;
 	 * Ergebnistyp: float;
-	 * Parameter: float durchmesser;
 	 * Beschreibung: Methode um die Variable 'durchmesser' zurückzugeben, da diese als private deklariert wurde;
-	 * Ergebnis: gibt die lokal gespeicherte Variable 'durchmesser' zurück**/
+	 * @param float durchmesser;
+	 * @return float durchmesser**/
 	public float getDurchmesser() {
 		return durchmesser;
 	}
 
 	/**Methodenname: setDurchmesser;
-	 * Ergebnistyp: float durchmesser;
-	 * Parameter: float durchmesser;
+	 * Ergebnistyp: void;
 	 * Beschreibung: Methode um der lokal gespeicherten Variable 'durchmesser' einen Wert zuzuweisen;
-	 * Ergebnis: speichert die Variable 'durchmesser' mit einem neuen Wert**/
+	 * @param float durchmesser;**/
 	public void setDurchmesser(float durchmesser) {
 		this.durchmesser = durchmesser;
 	}
 
 	/**Methodenname: getSchnittgeschwindigkeit;
 	 * Ergebnistyp: float;
-	 * Parameter: float schnittgeschwindigkeit;
 	 * Beschreibung: Methode um die Variable 'schnittgeschwindigkeit' zurückzugeben, da diese als private deklariert wurde;
-	 * Ergebnis: gibt die lokal gespeicherte Variable 'durchmesser' zurück**/
+	 * @param float schnittgeschwindigkeit;
+	 * @return float schnittgeschwindigkeit**/
 	public float getSchnittgeschwindigkeit() {
 		return schnittgeschwindigkeit;
 	}
 
 	/**Methodenname: setSchnittgeschwindigkeit;
-	 * Ergebnistyp: float schnittgeschwindigkeit;
-	 * Parameter: float schnittgeschwindigkeit;
+	 * Ergebnistyp: void;
 	 * Beschreibung: Methode um der lokal gespeicherten Variable 'schnittgeschwindigkeit' einen Wert zuzuweisen;
-	 * Ergebnis: speichert die Variable 'schnittgeschwindigkeit' mit einem neuen Wert**/
+	 * @param float schnittgeschwindigkeit;**/
 	public void setSchnittgeschwindigkeit(float schnittgeschwindigkeit) {
 		this.schnittgeschwindigkeit = schnittgeschwindigkeit;
 	}
