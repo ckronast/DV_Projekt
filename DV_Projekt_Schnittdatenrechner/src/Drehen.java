@@ -58,7 +58,7 @@ public class Drehen extends Bearbeiten {
 
 	
 	/** Der lokal gespeicherten Variable "vorschub" einen Wert zuweisen
-	 * @param Neuer Wert für "vorschub"
+	 * @param vorschub Neuer Wert für "vorschub"
 	 */
 	public void setVorschub(float vorschub) throws Exception{
 		if(vorschub>0 && vorschub<0.5)
@@ -79,7 +79,7 @@ public class Drehen extends Bearbeiten {
 
 	
 	/** Der lokal gespeicherten Variable "werkstückdurchmesser" einen Wert zuweisen
-	 * @param Neuer Wert für "werkstückdurchmesser" 
+	 * @param werkstückdurchmesser Neuer Wert für "werkstückdurchmesser" 
 	 */
 	public void setWerkstückdurchmesser(float werkstückdurchmesser) throws Exception {
 		if(werkstückdurchmesser>0 && werkstückdurchmesser<200)
