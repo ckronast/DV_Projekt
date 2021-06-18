@@ -82,7 +82,7 @@ public class Drehen extends Bearbeiten {
 	 * @param Neuer Wert für "werkstückdurchmesser" 
 	 */
 	public void setWerkstückdurchmesser(float werkstückdurchmesser) throws Exception {
-		if(werkstückdurchmesser>0 && werkstückdurchmesser<500)
+		if(werkstückdurchmesser>0 && werkstückdurchmesser<200)
 			this.werkstückdurchmesser = werkstückdurchmesser;
 		else 
 			throw new Exception("Ungültiger Werkstückdurchmesser");
