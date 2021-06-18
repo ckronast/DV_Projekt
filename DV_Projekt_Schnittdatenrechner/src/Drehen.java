@@ -1,17 +1,18 @@
 /**Klassenname: Drehen;
  * Beschreibung: Berechnet die Vorschubgeschwindigkeit, mit den übergebenen Attributen; ist eine Unterklasse von Bearbeiten;
- * @version 1.0
+ * @version 1.1
  * @author Tom Mutschler 
  */
 
 public class Drehen extends Bearbeiten {
 	
-	/**Variable um den VorschubDrehen zu speichern**/
-	private float vorschubDrehen;
+	/**Variable um den Vorschub zu speichern**/
+	private float vorschub;
 	/**Variable um die Vorschubgeschwindigkeit zu speichern**/
 	private float vorschubgeschwindigkeit;
-	/**Variable um die DrehzahlDrehen zu speichern**/
-	private float drehzahlDrehen;
+	/**Variable um den Werkstückdurchmesser zu speichern**/
+	private float werkstückdurchmesser;
+	
 	
 	
 	/**
@@ -19,63 +20,81 @@ public class Drehen extends Bearbeiten {
 	 */
 	public Drehen ()
 	{
-		drehzahlDrehen = 1000;
-		vorschubgeschwindigkeit = 20;
-		vorschubDrehen = 5 ;
+		setVorschubgeschwindigkeit(20);
+		setVorschub(5);
+		setWerkstückdurchmesser(10);
 	}
 	
 	/**
-	 * Kostruktor um die übergebenen Attribute in den Variablen drehzahlDrehen und vorschubDrehen zu speichern
-	 * @param drehzahl Das Attribut Drehzahl, dass der Klasse Drehen übergeben wird
-	 * @param vorschub Das Attribut Vorschub, dass der Klasse Drehen übergeben wird
+	 * Kostruktor um die übergebenen Attribute in den Variablen "vorschub" und "durchmesser" zu speichern
+	 * @param f Übergibt der Klasse Drehen den Vorschub
+	 * @param d Übergibt der Klasse Drehen den Werkstückdurchmesser
 	 */
-	public Drehen(float drehzahl, float vorschub)
+	public Drehen(float f, float d)
 	{
-		drehzahlDrehen = drehzahl;
-		vorschubgeschwindigkeit = 0;
-		vorschubDrehen = vorschub ;
+		setVorschubgeschwindigkeit(0);
+		setVorschub(f);
+		setWerkstückdurchmesser(d);
 	}
 	
 
 	
-	/**Methode mit dem Namen "vorschubgeschwindigkeitBerechnen", die mit den Parametern drehzahlDrehen und vorschubDrehen die Vorschubgeschwindigkeit berechnet
+	/**Methode mit dem Namen "vorschubgeschwindigkeitBerechnen", die mit der Drehzahl und dem Vorschub die Vorschubgeschwindigkeit berechnet
 	 * @return Ausgeben der berechneten Vorschubgeschwindigkeit
 	 */
 	public float vorschubgeschwindigkeitBerechnen() 
 	{		
-		vorschubgeschwindigkeit = drehzahlDrehen*vorschubDrehen;
+		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschub();
 		return vorschubgeschwindigkeit;
 	}
 	
 	
-	/** Gibt die Variable "vorschubDrehen" zurück, da diese als private deklariert wurde;
-	 * @return lokal gespeicherte Variable "vorschubDrehen"
+	
+	/** Gibt die Variable "vorschub" zurück, da diese als private deklariert wurde;
+	 * @return vorschub
 	 */
-	public float getvorschubDrehen() {
-		return vorschubDrehen;
+	public float getVorschub() {
+		return vorschub;
 	}
 
 	
-	/** Der lokal gespeicherten Variable "vorschubDrehen" einen Wert zuweisen
-	 * @param vorschubDrehen Variable "vorschubDrehen" mit neuem Wert
+	/** Der lokal gespeicherten Variable "vorschub" einen Wert zuweisen
+	 * @param Neuer Wert für "vorschub"
 	 */
-	public void setvorschubDrehen(float vorschubDrehen) {
-		this.vorschubDrehen = vorschubDrehen;
+	public void setVorschub(float vorschub) {
+		this.vorschub = vorschub;
 	}
 
 	
-	/** Gibt die Variable "drehzahlDrehen" zurück, da diese als private deklariert wurde;
-	 * @return lokal gespeicherte Variable "drehzahlDrehen"
+	
+	/** Gibt die Variable "vorschubgeschwindigkeit" zurück, da diese als private deklariert wurde;
+	 * @return vorschubgeschwindigkeit
 	 */
-	public float getdrehzahlDrehen() {
-		return drehzahlDrehen;
+	public float getVorschubgeschwindigkeit() {
+		return vorschubgeschwindigkeit;
 	}
 
 	
-	/** Der lokal gespeicherten Variable "drehzahlDrehen" einen Wert zuweisen
-	 * @param drehzahlDrehen Variable "drehzahlDrehen" mit neuem Wert
+	/** Der lokal gespeicherten Variable "vorschubgeschwindigkeit" einen Wert zuweisen
+	 * @param Neuer Wert für "vorschubgeschwindigkeit"
 	 */
-	public void setdrehzahlDrehen(float drehzahlDrehen) {
-		this.drehzahlDrehen = drehzahlDrehen;
+	public void setVorschubgeschwindigkeit(float vorschubgeschwindigkeit) {
+		this.vorschubgeschwindigkeit = vorschubgeschwindigkeit;
+	}
+	
+	
+	/** Gibt die Variable "werkstückdurchmesser" zurück, da diese als private deklariert wurde;
+	 * @return werkstückdurchmesser
+	 */
+	public float getWerkstückdurchmesser() {
+		return werkstückdurchmesser;
+	}
+
+	
+	/** Der lokal gespeicherten Variable "werkstückdurchmesser" einen Wert zuweisen
+	 * @param Neuer Wert für "werkstückdurchmesser" 
+	 */
+	public void setWerkstückdurchmesser(float werkstückdurchmesser) {
+		this.werkstückdurchmesser = werkstückdurchmesser;
 	}
 }
