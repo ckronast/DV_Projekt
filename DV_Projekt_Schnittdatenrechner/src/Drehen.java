@@ -23,7 +23,7 @@ public class Drehen extends Bearbeiten {
 	}
 	
 	/**
-	 * Kostruktor um die übergebenen Attribute in den Variablen "vorschub" und "durchmesser" zu speichern
+	 * Kostruktor um die übergebenen Attribute in den Variablen "vorschub" und "werkstückdurchmesser" zu speichern
 	 * @param f Übergibt der Klasse Drehen den Vorschub
 	 * @param d Übergibt der Klasse Drehen den Werkstückdurchmesser
 	 */
