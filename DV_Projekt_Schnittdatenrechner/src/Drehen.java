@@ -8,8 +8,6 @@ public class Drehen extends Bearbeiten {
 	
 	/**Variable um den Vorschub zu speichern**/
 	private float vorschub;
-	/**Variable um die Vorschubgeschwindigkeit zu speichern**/
-	private float vorschubgeschwindigkeit;
 	/**Variable um den Werkstückdurchmesser zu speichern**/
 	private float werkstückdurchmesser;
 	
@@ -18,9 +16,8 @@ public class Drehen extends Bearbeiten {
 	/**
 	 * Zweiter Konstuktor 
 	 */
-	public Drehen ()
+	public Drehen () throws Exception
 	{
-		setVorschubgeschwindigkeit(20);
 		setVorschub(5);
 		setWerkstückdurchmesser(10);
 	}
@@ -30,9 +27,8 @@ public class Drehen extends Bearbeiten {
 	 * @param f Übergibt der Klasse Drehen den Vorschub
 	 * @param d Übergibt der Klasse Drehen den Werkstückdurchmesser
 	 */
-	public Drehen(float f, float d)
+	public Drehen(float f, float d) throws Exception
 	{
-		setVorschubgeschwindigkeit(0);
 		setVorschub(f);
 		setWerkstückdurchmesser(d);
 	}
@@ -43,7 +39,8 @@ public class Drehen extends Bearbeiten {
 	 * @return Ausgeben der berechneten Vorschubgeschwindigkeit
 	 */
 	public float vorschubgeschwindigkeitBerechnen() 
-	{		
+	{	
+		float vorschubgeschwindigkeit;
 		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschub();
 		return vorschubgeschwindigkeit;
 	}
@@ -63,26 +60,14 @@ public class Drehen extends Bearbeiten {
 	/** Der lokal gespeicherten Variable "vorschub" einen Wert zuweisen
 	 * @param Neuer Wert für "vorschub"
 	 */
-	public void setVorschub(float vorschub) {
-		this.vorschub = vorschub;
+	public void setVorschub(float vorschub) throws Exception{
+		if(vorschub>0 && vorschub<0.5)
+			this.vorschub = vorschub;
+		else 
+			throw new Exception("Ungültiger Vorschub");
+		
 	}
 
-	
-	
-	/** Gibt die Variable "vorschubgeschwindigkeit" zurück, da diese als private deklariert wurde;
-	 * @return vorschubgeschwindigkeit
-	 */
-	public float getVorschubgeschwindigkeit() {
-		return vorschubgeschwindigkeit;
-	}
-
-	
-	/** Der lokal gespeicherten Variable "vorschubgeschwindigkeit" einen Wert zuweisen
-	 * @param Neuer Wert für "vorschubgeschwindigkeit"
-	 */
-	public void setVorschubgeschwindigkeit(float vorschubgeschwindigkeit) {
-		this.vorschubgeschwindigkeit = vorschubgeschwindigkeit;
-	}
 	
 	
 	/** Gibt die Variable "werkstückdurchmesser" zurück, da diese als private deklariert wurde;
@@ -96,7 +81,11 @@ public class Drehen extends Bearbeiten {
 	/** Der lokal gespeicherten Variable "werkstückdurchmesser" einen Wert zuweisen
 	 * @param Neuer Wert für "werkstückdurchmesser" 
 	 */
-	public void setWerkstückdurchmesser(float werkstückdurchmesser) {
-		this.werkstückdurchmesser = werkstückdurchmesser;
+	public void setWerkstückdurchmesser(float werkstückdurchmesser) throws Exception {
+		if(werkstückdurchmesser>0 && werkstückdurchmesser<500)
+			this.werkstückdurchmesser = werkstückdurchmesser;
+		else 
+			throw new Exception("Ungültiger Werkstückdurchmesser");
+		 
 	}
 }
