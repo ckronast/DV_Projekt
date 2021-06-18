@@ -12,7 +12,7 @@ public class Bohren extends Bearbeiten {
 	 * @param Vc übergibt die Schnittgeschwindigkeit
 	 * @param d übergibt den Bohrerdurchmesser
 	 */
-	public Bohren (float Vc, float d) {
+	public Bohren (float Vc, float d) throws Exception {
 		setSchnittgeschwindigkeit(Vc);
 		setDurchmesser(d);
 	};
@@ -20,7 +20,7 @@ public class Bohren extends Bearbeiten {
 	/**
 	 * Setzt mit hilfe der set-Methoden die Werte Durchmesser und Schnittgeschwindigkeit auf vorgegebene Werte
 	 */
-	 public Bohren() {
+	 public Bohren() throws Exception {
 		 setSchnittgeschwindigkeit(100);
 		 setDurchmesser(15);
 	 };
