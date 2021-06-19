@@ -14,7 +14,7 @@ public class Bohren extends Bearbeiten {
 	 */
 	public Bohren (float Vc, float d) throws Exception {
 		setSchnittgeschwindigkeit(Vc);
-		setDurchmesser(d) ;
+		setDurchmesser(d);
 	};
 	
 	/**
