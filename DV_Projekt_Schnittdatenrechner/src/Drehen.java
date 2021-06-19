@@ -15,6 +15,7 @@ public class Drehen extends Bearbeiten {
 	
 	/**
 	 * Zweiter Konstuktor 
+	 * Setzt die Werte Vorschub und Werkstückdurchmesser auf vorgegebene Werte
 	 */
 	public Drehen () throws Exception
 	{
@@ -38,7 +39,7 @@ public class Drehen extends Bearbeiten {
 	/**Methode mit dem Namen "vorschubgeschwindigkeitBerechnen", die mit der Drehzahl und dem Vorschub die Vorschubgeschwindigkeit berechnet
 	 * @return Ausgeben der berechneten Vorschubgeschwindigkeit
 	 */
-	public float vorschubgeschwindigkeitBerechnen() 
+	public float vorschubgeschwindigkeitBerechnen() throws Exception
 	{	
 		float vorschubgeschwindigkeit;
 		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschub();
@@ -57,11 +58,11 @@ public class Drehen extends Bearbeiten {
 	}
 
 	
-	/** Der lokal gespeicherten Variable "vorschub" einen Wert zuweisen
+	/** Der lokal gespeicherten Variable "vorschub" wird ein Wert zugewiesen, der noch auf seine Gültigkeit überprüft wird
 	 * @param vorschub Neuer Wert für "vorschub"
 	 */
 	public void setVorschub(float vorschub) throws Exception{
-		if(vorschub>0 && vorschub<0.5)
+		if(vorschub>0 && vorschub<1)
 			this.vorschub = vorschub;
 		else 
 			throw new Exception("Ungültiger Vorschub");
@@ -78,7 +79,7 @@ public class Drehen extends Bearbeiten {
 	}
 
 	
-	/** Der lokal gespeicherten Variable "werkstückdurchmesser" einen Wert zuweisen
+	/** Der lokal gespeicherten Variable "werkstückdurchmesser" wird ein Wert zugewiesen, der noch auf seine Gültigkeit überprüft wird
 	 * @param werkstückdurchmesser Neuer Wert für "werkstückdurchmesser" 
 	 */
 	public void setWerkstückdurchmesser(float werkstückdurchmesser) throws Exception {
