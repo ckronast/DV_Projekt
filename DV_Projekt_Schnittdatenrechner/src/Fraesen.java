@@ -8,15 +8,7 @@ public class Fraesen extends Bearbeiten{
 	/**Variable um die Zähnezahl speichern zu können**/
 	private int zähnezahl;
 	/**Variable um die Zähnezahl speichern zu können**/
-	private float fraerdurchmesser;
-	
-	/** Konstruktor 1 zum testen**/
-	public Fraesen () throws Exceptpion
-	{
-		setVorschubjezahn(0,2);
-		setZähnezahl(4);
-		setFraeserdurchmesser(12);
-	}
+	private float werkzeugdurchmesser;
 	
 	/**
 	 * Kostruktor um die übergebenen Attribute in den Variablen "vorschub" und "werkstückdurchmesser" zu speichern
@@ -27,8 +19,17 @@ public class Fraesen extends Bearbeiten{
 	{
 		setVorschubjezahn(fz);
 		setZähnezahl(zz);
-		setFraeserdurchmesser(df);
+		setWerkzeugdurchmesser(df);
 	}
+	
+	/** Konstruktor 1 zum testen**/
+	public Fraesen () throws Exception
+	{
+		setVorschubjezahn(1/5);
+		setZähnezahl(4);
+		setWerkzeugdurchmesser(12);
+	}
+	
 	
 
 	/**Methodenname: vorschubgeschwindigkeitBerechnen;
@@ -39,28 +40,74 @@ public class Fraesen extends Bearbeiten{
 	public float vorschubgeschwindigkeitBerechnen() 
 	{		
 		float vorschubgeschwindigkeit;
-		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschubjezahn()*getZähneahl();
+		vorschubgeschwindigkeit = drehzahlBerechnen*getVorschubjezahn()*getZähnezahl();
 		return vorschubgeschwindigkeit;
 	}
 	
-	/**Methodenname: getZähneZahl;
+	
+	/**Methodenname: getVorschubjezahn;
 	 * Ergebnistyp: float;
-	 * Parameter: float zähneZahl;
+	 * Parameter: float vorschubjezahn;
+	 * Beschreibung: Methode um die Variable 'vorschubjezahn' zurückzugeben, da diese als private deklariert wurde;
+	 * Ergebnis: gibt die lokal gespeicherte Variable 'vorschubjezahn' zurück**/
+	public float getVorschubjezahn() {
+		return vorschubjezahn;
+	}
+
+	/**Methodenname: setVorschubjezahn;
+	 * Ergebnistyp: float vorschubjezahn;
+	 * Parameter: float vorschubjezahn;
+	 * Beschreibung: Methode um der lokal gespeicherten Variable 'vorschubjezahn' einen Wert zuzuweisen;
+	 * Ergebnis: speichert die Variable 'vorschubjezahn' mit einem neuen Wert**/
+	public void setVorschubjezahn(float vorschubjezahn) throws Exception{
+		if(vorschubjezahn>0 && vorschubjezahn<0.4)
+			this.vorschubjezahn = vorschubjezahn;
+		else
+			throw new Exception ("Bitte geben sie einen gültige Vorschub je Zahn ein! Dieser muss größer als Null, positiv und kleiner als 0.4 sein.");
+	}
+	
+	
+	/**Methodenname: getVorschubjezahn;
+	 * Ergebnistyp: int;
+	 * Parameter: int zähneZahl;
 	 * Beschreibung: Methode um die Variable 'zähneZahl' zurückzugeben, da diese als private deklariert wurde;
 	 * Ergebnis: gibt die lokal gespeicherte Variable 'zähneZahl' zurück**/
-	public int getZähneZahl() {
-		return zähneZahl;
+	public int getZähnezahl() {
+		return zähnezahl;
 	}
 
-	/**Methodenname: setZähneZahl;
-	 * Ergebnistyp: float zähneZahl;
-	 * Parameter: float zähneZahl;
-	 * Beschreibung: Methode um der lokal gespeicherten Variable 'zähneZahl' einen Wert zuzuweisen;
-	 * Ergebnis: speichert die Variable 'zähneZahl' mit einem neuen Wert**/
-	public void setDurchmesser(int zähneZahl) {
-		this.zähneZahl = zähneZahl;
+	/**Methodenname: setZähnezahl;
+	 * Ergebnistyp: int zähnezahl;
+	 * Parameter: int zähnezahl;
+	 * Beschreibung: Methode um der lokal gespeicherten Variable 'zähnezahl' einen Wert zuzuweisen;
+	 * Ergebnis: speichert die Variable 'zähnezahl' mit einem neuen Wert**/
+	public void setZähnezahl(int zähnezahl) throws Exception{
+		if(zähnezahl>0 && zähnezahl%1==0)
+			this.zähnezahl = zähnezahl;
+		else
+			throw new Exception ("Bitte geben sie eine gültige Zähneanzahl ein! Diese muss ganzzahlig, positiv und größer als Null sein.");
+	}
+	
+	/**Methodenname: getWerkzeugdurchmesser;
+	 * Ergebnistyp: float;
+	 * Parameter: float werkzeugdurchmesser;
+	 * Beschreibung: Methode um die Variable 'werkzeugdurchmesser' zurückzugeben, da diese als private deklariert wurde;
+	 * Ergebnis: gibt die lokal gespeicherte Variable 'werkzeugdurchmesser' zurück**/
+	public float getWerkzeugdurchmesser() {
+		return werkzeugdurchmesser;
 	}
 
+	/**Methodenname: setWerkzeugdurchmesser;
+	 * Ergebnistyp: float werkzeugdurchmesser;
+	 * Parameter: float werkzeugdurchmesser;
+	 * Beschreibung: Methode um der lokal gespeicherten Variable 'werkzeugdurchmesser' einen Wert zuzuweisen;
+	 * Ergebnis: speichert die Variable 'werkzeugdurchmesser' mit einem neuen Wert**/
+	public void setWerkzeugdurchmesser(float werkzeugdurchmesser) throws Exception{
+		if(werkzeugdurchmesser>0)
+			this.werkzeugdurchmesser = werkzeugdurchmesser;
+		else
+			throw new Exception ("Bitte geben sie einen gültigen Werkzeugdurchmesser ein! Dieser muss größer als Null und positiv sein.");
+	}
 	
 }
 	
