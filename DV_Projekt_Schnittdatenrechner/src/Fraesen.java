@@ -1,6 +1,6 @@
 /**Name: Fraesen mit Bearbeiten erwitert;
- * Version: 1;
- * Von: Nico Waidele und Martin Maier**/
+ * @version: 1.2
+ * @author: Nico Waidele und Martin Maier**/
 public class Fraesen extends Bearbeiten{
 	
 	/**Variable um den Vorschub speichern zu können**/
