@@ -4,22 +4,30 @@
 public class Fraesen extends Bearbeiten{
 	
 	/**Variable um den Vorschub speichern zu können**/
-	private float vorschubJeZahn;
-	/**Variable um die Vorschubgeschwindigkeit speichern zu können**/
-	private float vorschubgeschwindigkeit;
-	/**Variable um die Drehzahl speichern zu können**/
-	private float drehzahlFraesen;
+	private float vorschubjezahn;
 	/**Variable um die Zähnezahl speichern zu können**/
-	private int zähneZahl;
+	private int zähnezahl;
+	/**Variable um die Zähnezahl speichern zu können**/
+	private float fraerdurchmesser;
 	
-	/**Konstruktor1: Bohren;
-	 * Ergebnistyp: keiner;
-	 * Parameter: float drehzahl, float vorschub, int zähne;**/
-	public Fraesen(float drehzahl, float vorschub,int zähne)
+	/** Konstruktor 1 zum testen**/
+	public Fraesen () throws Exceptpion
 	{
-		drehzahlFraesen = drehzahl;
-		vorschubJeZahn = vorschub ;
-		zähneZahl = zähne;
+		setVorschubjezahn(0,2);
+		setZähnezahl(4);
+		setFraeserdurchmesser(12);
+	}
+	
+	/**
+	 * Kostruktor um die übergebenen Attribute in den Variablen "vorschub" und "werkstückdurchmesser" zu speichern
+	 * @param f Übergibt der Klasse Drehen den Vorschub
+	 * @param d Übergibt der Klasse Drehen den Werkstückdurchmesser
+	 */
+	public Fraesen(float fz,int zz, float df) throws Exception
+	{
+		setVorschubjezahn(fz);
+		setZähnezahl(zz);
+		setFraeserdurchmesser(df);
 	}
 	
 
@@ -30,7 +38,8 @@ public class Fraesen extends Bearbeiten{
 	 * Ergebnis: gibt die berechnete Vorschubgeschwindigkeit zurück**/
 	public float vorschubgeschwindigkeitBerechnen() 
 	{		
-		vorschubgeschwindigkeit = drehzahlFraesen*vorschubJeZahn*zähneZahl;
+		float vorschubgeschwindigkeit;
+		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschubjezahn()*getZähneahl();
 		return vorschubgeschwindigkeit;
 	}
 	
