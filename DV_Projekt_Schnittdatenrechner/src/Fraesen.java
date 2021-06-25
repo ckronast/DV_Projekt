@@ -40,10 +40,10 @@ public class Fraesen extends Bearbeiten{
 	 * Ergebnis: gibt die berechnete Vorschubgeschwindigkeit zurück*
 	 * @return Vorschubgeschwindigkeit
 	 * */
-	public float vorschubgeschwindigkeitBerechnen() 
+	public float vorschubgeschwindigkeitBerechnen() throws Exception
 	{		
 		float vorschubgeschwindigkeit;
-		vorschubgeschwindigkeit = drehzahlBerechnen*getVorschubjezahn()*getZähnezahl();
+		vorschubgeschwindigkeit = drehzahlBerechnen()*getVorschubjezahn()*getZähnezahl();
 		return vorschubgeschwindigkeit;
 	}
 	
