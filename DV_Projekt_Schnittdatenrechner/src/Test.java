@@ -13,9 +13,17 @@ public class Test {
 		bohrerdurchmesser = bohrerdurchmesser/1000;
 		
 		
-		Bohren berechnung = new Bohren(schnittgeschwindigkeit, bohrerdurchmesser);
+		try {
+			Bohren berechnung = new Bohren(schnittgeschwindigkeit, bohrerdurchmesser);
+			System.out.println(berechnung.drehzahlBerechnen());
+
+		} 
+		catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-		System.out.println(berechnung.drehzahlBerechnen());
+		
 	}
 
 }

@@ -19,7 +19,7 @@ public class Bearbeiten {
 	 */
 	public float drehzahlBerechnen() throws Exception {
 		float drehzahl;
-		drehzahl = (float) (getSchnittgeschwindigkeit()/(Math.PI*getDurchmesser()));
+		drehzahl = (float) (getSchnittgeschwindigkeit()/(Math.PI*getDurchmesser()/1000));
 		return drehzahl;
 	}
 
@@ -37,10 +37,11 @@ public class Bearbeiten {
 	 * @param durchmesser bekommt einen Wert zugewiesen
 	 */
 	public void setDurchmesser(float durchmesser) throws Exception {
-		if(durchmesser>0 && durchmesser<=100)
-			this.durchmesser = durchmesser;
 		if(durchmesser > 100) 
 			throw new Exception("Zu großer Eingabewert");
+		
+		if(durchmesser>0 && durchmesser<=100)
+			this.durchmesser = durchmesser;
 		else 
 			throw new Exception("Ungültige Eingabe");
 	}
@@ -58,10 +59,11 @@ public class Bearbeiten {
 	 * @param schnittgeschwindigkeit bekommt einen Wert zugewiesen
 	 */
 	public void setSchnittgeschwindigkeit(float schnittgeschwindigkeit) throws Exception {
-		if(schnittgeschwindigkeit>0 && schnittgeschwindigkeit<=200)
-			this.schnittgeschwindigkeit = schnittgeschwindigkeit;
 		if(schnittgeschwindigkeit > 200) 
 			throw new Exception("Zu großer Eingabewert");
+		
+		if(schnittgeschwindigkeit>0 && schnittgeschwindigkeit<=200)
+			this.schnittgeschwindigkeit = schnittgeschwindigkeit;
 		else 
 			throw new Exception("Ungültige Eingabe");
 	}
