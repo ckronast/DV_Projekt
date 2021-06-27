@@ -188,39 +188,45 @@ public class GUI {
 	Bohren.add(lblDrehzahlBohren);
 	
 	Drehen = new JPanel();
+	Drehen.setBackground(new Color(144, 238, 144));
 	layeredPane.add(Drehen, "name_102774591348800");
 	Drehen.setLayout(null);
 	
-	JLabel lblNewLabel_1 = new JLabel("DREHEN");
-	lblNewLabel_1.setBounds(546, 11, 84, 25);
-	lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-	Drehen.add(lblNewLabel_1);
+	JLabel headlineDrehen = new JLabel("DREHEN");
+	headlineDrehen.setHorizontalAlignment(SwingConstants.CENTER);
+	headlineDrehen.setBounds(580, 10, 350, 40);
+	headlineDrehen.setFont(new Font("Tahoma", Font.BOLD, 40));
+	Drehen.add(headlineDrehen);
 	
 	JButton ButtonBack1 = new JButton("Back");
+	ButtonBack1.setFont(new Font("Tahoma", Font.PLAIN, 30));
 	ButtonBack1.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 			Panel_Öffnen(Menue);
 		}
 	});
-	ButtonBack1.setBounds(500, 250, 100, 50);
+	ButtonBack1.setBounds(1280, 600, 120, 50);
 	Drehen.add(ButtonBack1);
 	
 	Fraesen = new JPanel();
+	Fraesen.setBackground(new Color(144, 238, 144));
 	layeredPane.add(Fraesen, "name_102777175454400");
 	Fraesen.setLayout(null);
 	
-	JLabel lblNewLabel_2 = new JLabel("FR\u00C4SEN");
-	lblNewLabel_2.setBounds(0, 0, 81, 25);
-	lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 20));
-	Fraesen.add(lblNewLabel_2);
+	JLabel headlineFräsen = new JLabel("FRÄSEN");
+	headlineFräsen.setHorizontalAlignment(SwingConstants.CENTER);
+	headlineFräsen.setBounds(580, 10, 350, 40);
+	headlineFräsen.setFont(new Font("Tahoma", Font.BOLD, 40));
+	Fraesen.add(headlineFräsen);
 	
 	JButton ButtonBack2 = new JButton("Back");
+	ButtonBack2.setFont(new Font("Tahoma", Font.PLAIN, 30));
 	ButtonBack2.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent arg0) {
 			Panel_Öffnen(Menue);
 		}
 	});
-	ButtonBack2.setBounds(433, 301, 89, 23);
+	ButtonBack2.setBounds(1280, 600, 120, 50);
 	Fraesen.add(ButtonBack2);
 	}
 }
