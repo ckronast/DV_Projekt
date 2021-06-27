@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 import javax.swing.JFrame;
+import javax.swing.AbstractButton;
 import javax.swing.JButton;
 import java.awt.BorderLayout;
 import java.awt.event.ActionListener;
@@ -67,7 +68,7 @@ public class GUI {
 	Hauptrahmen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	Hauptrahmen.getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
 	Hauptrahmen.setTitle("Schnittdatenrechner");
-	Hauptrahmen.setBounds(0,0,1471,710);
+	Hauptrahmen.setBounds(0,0,1470,710);
 	
 	layeredPane = new JLayeredPane();
 	Hauptrahmen.getContentPane().add(layeredPane);
@@ -137,23 +138,23 @@ public class GUI {
 	
 	JLabel lblDurchmesserBohren = new JLabel("Durchmesser (mm):");
 	lblDurchmesserBohren.setFont(new Font("Tahoma", Font.PLAIN, 35));
-	lblDurchmesserBohren.setBounds(125, 160, 400, 50);
+	lblDurchmesserBohren.setBounds(125, 100, 400, 50);
 	Bohren.add(lblDurchmesserBohren);
 	
 	JTextField EingabeDurchmesserBohren = new JTextField();
 	EingabeDurchmesserBohren.setFont(new Font("Tahoma", Font.PLAIN, 35));
-	EingabeDurchmesserBohren.setBounds(780, 160, 200, 50);
+	EingabeDurchmesserBohren.setBounds(780, 100, 200, 50);
 	Bohren.add(EingabeDurchmesserBohren);
 	EingabeDurchmesserBohren.setColumns(10);
 	
 	JLabel lblSchnittgeschwindigkeitBohren = new JLabel("Schnittgeschwindigkeit (m/min):");
 	lblSchnittgeschwindigkeitBohren.setFont(new Font("Tahoma", Font.PLAIN, 35));
-	lblSchnittgeschwindigkeitBohren.setBounds(125, 250, 560, 50);
+	lblSchnittgeschwindigkeitBohren.setBounds(125, 175, 560, 50);
 	Bohren.add(lblSchnittgeschwindigkeitBohren);
 	
 	JTextField EingabeSchnittgeschwindigkeitBohren = new JTextField();
 	EingabeSchnittgeschwindigkeitBohren.setFont(new Font("Tahoma", Font.PLAIN, 35));
-	EingabeSchnittgeschwindigkeitBohren.setBounds(780, 250, 200, 50);
+	EingabeSchnittgeschwindigkeitBohren.setBounds(780, 175, 200, 50);
 	Bohren.add(EingabeSchnittgeschwindigkeitBohren);
 	EingabeSchnittgeschwindigkeitBohren.setColumns(10);
 	
@@ -179,7 +180,7 @@ public class GUI {
 			
 		}
 	});
-	btnBerechnenBohren.setBounds(125, 360, 855, 50);
+	btnBerechnenBohren.setBounds(125, 350, 855, 50);
 	Bohren.add(btnBerechnenBohren);
 	
 	lblDrehzahlBohren = new JLabel("Drehzahl (1/min):");
@@ -198,6 +199,39 @@ public class GUI {
 	headlineDrehen.setFont(new Font("Tahoma", Font.BOLD, 40));
 	Drehen.add(headlineDrehen);
 	
+	JLabel lblDurchmesserDrehen = new JLabel("Durchmesser (mm):");
+	lblDurchmesserDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblDurchmesserDrehen.setBounds(125, 100, 400, 50);
+	Drehen.add(lblDurchmesserDrehen);
+	
+	JTextField EingabeDurchmesserDrehen = new JTextField();
+	EingabeDurchmesserDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeDurchmesserDrehen.setBounds(780, 100, 200, 50);
+	Drehen.add(EingabeDurchmesserDrehen);
+	EingabeDurchmesserDrehen.setColumns(10);
+	
+	JLabel lblVorschubDrehen = new JLabel("Vorschub (mm):");
+	lblVorschubDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblVorschubDrehen.setBounds(125, 175, 400, 50);
+	Drehen.add(lblVorschubDrehen);
+	
+	JTextField EingabeVorschubDrehen = new JTextField();
+	EingabeVorschubDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeVorschubDrehen.setBounds(780, 175, 200, 50);
+	Drehen.add(EingabeVorschubDrehen);
+	EingabeVorschubDrehen.setColumns(10);
+	
+	JLabel lblSchnittgeschwindigkeitDrehen = new JLabel("Schnittgeschwindigkeit (m/min):");
+	lblSchnittgeschwindigkeitDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblSchnittgeschwindigkeitDrehen.setBounds(125, 250, 600, 50);
+	Drehen.add(lblSchnittgeschwindigkeitDrehen);
+	
+	JTextField EingabeSchnittgeschwindigkeitDrehen = new JTextField();
+	EingabeSchnittgeschwindigkeitDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeSchnittgeschwindigkeitDrehen.setBounds(780, 250, 200, 50);
+	Drehen.add(EingabeSchnittgeschwindigkeitDrehen);
+	EingabeSchnittgeschwindigkeitDrehen.setColumns(10);
+	
 	JButton ButtonBack1 = new JButton("Back");
 	ButtonBack1.setFont(new Font("Tahoma", Font.PLAIN, 30));
 	ButtonBack1.addActionListener(new ActionListener() {
@@ -207,6 +241,8 @@ public class GUI {
 	});
 	ButtonBack1.setBounds(1280, 600, 120, 50);
 	Drehen.add(ButtonBack1);
+	
+	
 	
 	Fraesen = new JPanel();
 	Fraesen.setBackground(new Color(144, 238, 144));
