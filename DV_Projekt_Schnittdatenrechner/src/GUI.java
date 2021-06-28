@@ -32,6 +32,8 @@ public class GUI {
 	private JTextField textField;
 	private JTextField textField_1;
 	private JLabel lblDrehzahlBohren;
+	private JLabel lblDrehzahlFraesen;
+	private JLabel lblDrehzahlDrehen;
 	
 	/**
 	 * Launch the application.
@@ -232,6 +234,38 @@ public class GUI {
 	Drehen.add(EingabeSchnittgeschwindigkeitDrehen);
 	EingabeSchnittgeschwindigkeitDrehen.setColumns(10);
 	
+	JButton btnBerechnenDrehen = new JButton("Berechnen");
+	btnBerechnenDrehen.setFont(new Font("Tahoma", Font.BOLD, 30));
+	btnBerechnenDrehen.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent arg0) {
+			float Durchmesser;
+			float Schub;
+			float Schnittg;
+			String Eingabe1 = EingabeDurchmesserDrehen.getText();
+			String Eingabe2 = EingabeVorschubDrehen.getText();
+			String Eingabe3 = EingabeSchnittgeschwindigkeitDrehen.getText();
+			try {
+				Durchmesser = Float.parseFloat(Eingabe1);
+				Schub = Float.parseFloat(Eingabe2);
+				Schnittg = Float.parseFloat(Eingabe3);
+				Drehen Dreh = new Drehen(Schub, Durchmesser);
+				float Ergebnis = Dreh.drehzahlBerechnen();
+				lblDrehzahlBohren.setText("Drehzahl (1/min): " + Ergebnis);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+	});
+	btnBerechnenDrehen.setBounds(125, 350, 855, 50);
+	Bohren.add(btnBerechnenDrehen);
+	
+	lblDrehzahlDrehen = new JLabel("Drehzahl (1/min):");
+	lblDrehzahlDrehen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblDrehzahlDrehen.setBounds(125, 460, 500, 50);
+	Drehen.add(lblDrehzahlDrehen);
+	
 	JButton ButtonBack1 = new JButton("Back");
 	ButtonBack1.setFont(new Font("Tahoma", Font.PLAIN, 30));
 	ButtonBack1.addActionListener(new ActionListener() {
@@ -254,6 +288,44 @@ public class GUI {
 	headlineFräsen.setBounds(580, 10, 350, 40);
 	headlineFräsen.setFont(new Font("Tahoma", Font.BOLD, 40));
 	Fraesen.add(headlineFräsen);
+	
+	JLabel lblDurchmesserFraesen = new JLabel("Durchmesser (mm):");
+	lblDurchmesserFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblDurchmesserFraesen.setBounds(125, 100, 400, 50);
+	Fraesen.add(lblDurchmesserFraesen);
+	
+	JTextField EingabeDurchmesserFraesen = new JTextField();
+	EingabeDurchmesserFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeDurchmesserFraesen.setBounds(780, 100, 200, 50);
+	Fraesen.add(EingabeDurchmesserFraesen);
+	EingabeDurchmesserFraesen.setColumns(10);
+	
+	JLabel lblVorschubFraesen = new JLabel("Vorschub (mm):");
+	lblVorschubFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblVorschubFraesen.setBounds(125, 175, 400, 50);
+	Fraesen.add(lblVorschubFraesen);
+	
+	JTextField EingabeVorschubFraesen = new JTextField();
+	EingabeVorschubFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeVorschubFraesen.setBounds(780, 175, 200, 50);
+	Fraesen.add(EingabeVorschubFraesen);
+	EingabeVorschubFraesen.setColumns(10);
+	
+	JLabel lblSchnittgeschwindigkeitFraesen = new JLabel("Schnittgeschwindigkeit (m/min):");
+	lblSchnittgeschwindigkeitFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblSchnittgeschwindigkeitFraesen.setBounds(125, 250, 600, 50);
+	Fraesen.add(lblSchnittgeschwindigkeitFraesen);
+	
+	JTextField EingabeSchnittgeschwindigkeitFraesen = new JTextField();
+	EingabeSchnittgeschwindigkeitFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	EingabeSchnittgeschwindigkeitFraesen.setBounds(780, 250, 200, 50);
+	Fraesen.add(EingabeSchnittgeschwindigkeitFraesen);
+	EingabeSchnittgeschwindigkeitFraesen.setColumns(10);
+	
+	lblDrehzahlFraesen = new JLabel("Drehzahl (1/min):");
+	lblDrehzahlFraesen.setFont(new Font("Tahoma", Font.PLAIN, 35));
+	lblDrehzahlFraesen.setBounds(125, 460, 500, 50);
+	Fraesen.add(lblDrehzahlFraesen);
 	
 	JButton ButtonBack2 = new JButton("Back");
 	ButtonBack2.setFont(new Font("Tahoma", Font.PLAIN, 30));
