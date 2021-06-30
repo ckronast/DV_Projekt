@@ -20,7 +20,9 @@ public class Drehen extends Bearbeiten {
 	public Drehen () throws Exception
 	{
 		setVorschub(5);
-		setWerkstückdurchmesser(10);
+		setDurchmesser(10);
+		setSchnittgeschwindigkeit(25);
+
 	}
 	
 	/**
@@ -28,10 +30,11 @@ public class Drehen extends Bearbeiten {
 	 * @param f Übergibt der Klasse Drehen den Vorschub
 	 * @param d Übergibt der Klasse Drehen den Werkstückdurchmesser
 	 */
-	public Drehen(float f, float d) throws Exception
+	public Drehen(float f, float d, float fc) throws Exception
 	{
 		setVorschub(f);
-		setWerkstückdurchmesser(d);
+		setDurchmesser(d);
+		setSchnittgeschwindigkeit(fc);
 	}
 	
 

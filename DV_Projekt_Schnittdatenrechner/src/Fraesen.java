@@ -16,11 +16,12 @@ public class Fraesen extends Bearbeiten{
 	 * @param zz Übergibt der Klasse Fraesen die Zähnezahl
 	 * @param df Übergibt der Klasse Fraesen den Werkzeugdurchmesser
 	 */
-	public Fraesen(float fz,int zz, float df) throws Exception
+	public Fraesen(float fz,int zz, float df, float fc) throws Exception
 	{
 		setVorschubjezahn(fz);
 		setZähnezahl(zz);
-		setWerkzeugdurchmesser(df);
+		setDurchmesser(df);
+		setSchnittgeschwindigkeit(fc);
 	}
 	
 	/** Konstruktor 2 mit vorgegebenen Werten zum testen**/
@@ -28,7 +29,8 @@ public class Fraesen extends Bearbeiten{
 	{
 		setVorschubjezahn(1/5);
 		setZähnezahl(4);
-		setWerkzeugdurchmesser(12);
+		setDurchmesser(12);
+		setSchnittgeschwindigkeit(25);
 	}
 	
 	

@@ -38,12 +38,12 @@ public class Bearbeiten {
 	 */
 	public void setDurchmesser(float durchmesser) throws Exception {
 		if(durchmesser > 100) 
-			throw new Exception("Zu großer Eingabewert");
+			throw new Exception("Zu großer Durchmesser");
 		
 		if(durchmesser>0 && durchmesser<=100)
 			this.durchmesser = durchmesser;
 		else 
-			throw new Exception("Ungültige Eingabe");
+			throw new Exception("Ungültiger Durchmesser");
 	}
 
 	/**
@@ -60,12 +60,12 @@ public class Bearbeiten {
 	 */
 	public void setSchnittgeschwindigkeit(float schnittgeschwindigkeit) throws Exception {
 		if(schnittgeschwindigkeit > 200) 
-			throw new Exception("Zu großer Eingabewert");
+			throw new Exception("Zu hohe Schnittgeschwindigkeit");
 		
 		if(schnittgeschwindigkeit>0 && schnittgeschwindigkeit<=200)
 			this.schnittgeschwindigkeit = schnittgeschwindigkeit;
 		else 
-			throw new Exception("Ungültige Eingabe");
+			throw new Exception("Ungültige Schnittgeschwindigkeit");
 	}
 	
 	/**
