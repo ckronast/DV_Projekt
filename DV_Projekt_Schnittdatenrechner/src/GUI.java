@@ -124,6 +124,10 @@ public class GUI {
 	Button_Drehen.setBounds(1030, 140, 350, 435);
 	Menue.add(Button_Drehen);
 	
+	/**
+	 * Panel für Bohren
+	 */
+	
 	Bohren = new JPanel();
 	Bohren.setBackground(new Color(144, 238, 144));
 	layeredPane.add(Bohren, "name_102757503673300");
@@ -199,6 +203,10 @@ public class GUI {
 	lblDrehzahlBohren.setFont(new Font("Tahoma", Font.PLAIN, 35));
 	lblDrehzahlBohren.setBounds(125, 460, 626, 50);
 	Bohren.add(lblDrehzahlBohren);
+	
+	/**
+	 * Panel für Drehen
+	 */
 	
 	Drehen = new JPanel();
 	Drehen.setBackground(new Color(144, 238, 144));
@@ -296,7 +304,9 @@ public class GUI {
 	ButtonBack1.setBounds(1280, 600, 120, 50);
 	Drehen.add(ButtonBack1);
 	
-	
+	/**
+	 * Panel für Fräsen
+	 */
 	
 	Fraesen = new JPanel();
 	Fraesen.setBackground(new Color(144, 238, 144));
