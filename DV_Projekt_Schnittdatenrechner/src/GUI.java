@@ -1,3 +1,7 @@
+/**
+ * Autoren: Constantin Kronast & Konstantin Groﬂkopf
+ */
+
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.AbstractButton;
